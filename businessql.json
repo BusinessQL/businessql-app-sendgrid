@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1-alpha",
+  "nameId": "sendgrid",
+  "name": "SendGrid",
+  "categories": ["email"],
+  "settings": {
+    "fields": [
+      {
+        "label": "API Key",
+        "name": "apiKey",
+        "type": "password"
+      }
+    ]
+  },
+  "api": {
+    "url": "https://us-east4-bql-production.cloudfunctions.net/sendgrid"
+  },
+  "developer": {
+    "nameId": "businessql"
+  },
+  "logo": "https://raw.githubusercontent.com/BusinessQL/businessql-app-sendgrid/main/images/logo.svg",
+  "theme": {
+    "colors": {
+      "primary": "#1A82E2"
+    }
+  }
+}

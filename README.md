@@ -1,2 +1,1 @@
-# businessql-app-sendgrid
-SendGrid - BusinessQL App
+# SendGrid - BusinessQL App
