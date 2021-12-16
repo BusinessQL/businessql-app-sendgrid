@@ -1,0 +1,25 @@
+[query]
+  # send email
+  [query.sendEmail]
+  type = "api"
+  url = "https://api.sendgrid.com/v3/mail/send"
+  method = "POST"
+
+    [query.sendEmail.headers]
+    Authorization = "Bearer {data.apiKey}"
+
+    [query.sendEmail.data]
+    subject = "{args.subject}"
+    [query.sendEmail.data.from]
+      email = "{args.email}"
+    [[query.sendEmail.data.personalizations]]
+      [[query.sendEmail.data.personalizations.to]]
+      email = "{args.to}"
+    [[query.sendEmail.data.content]]
+    type = "text/html"
+    value = "{{args.html|args.text}}"
+      
+
+    [query.sendEmail.response]
+      [query.sendEmail.response.success]
+      sent = true
