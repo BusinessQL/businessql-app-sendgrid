@@ -11,7 +11,7 @@
     [query.sendEmail.data]
     subject = "{args.subject}"
     [query.sendEmail.data.from]
-      email = "{args.email}"
+      email = "{args.from}"
     [[query.sendEmail.data.personalizations]]
       [[query.sendEmail.data.personalizations.to]]
       email = "{args.to}"
